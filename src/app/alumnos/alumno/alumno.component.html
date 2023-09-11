@@ -1,0 +1,34 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Curse</th>
+        <th scope="col">Salon</th>
+        <th scope="col">accommodation</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{name}}</td>
+        <td>{{lastname}}</td>
+        <td>{{curse}}</td>
+        <td>{{salon}}</td>
+        <td>{{asisten}}</td>
+      </tr>
+      <button (click)="changeCurse()" type="button" class="btn btn-primary m-2">Cambiar Curso</button>
+      <button (click)="changeSalon()" type="button" class="btn btn-success">Cambiar Salon</button>
+      <button (click)="aumentarCapacidad()" type="button" class="btn btn-danger m-2">Aumentar Capacidad</button>
+      <button (click)="disminuirCapacidad()" type="button" class="btn btn-light">Disminuir Capacidad</button>
+      <p *ngIf="asisten>25">
+        Se lleno el salon
+      </p>
+      <ol class="list-group list-group-numbered">
+        <li *ngFor="let item of salones" class="list-group-item">{{item}}
+
+        </li>
+        
+      </ol>
